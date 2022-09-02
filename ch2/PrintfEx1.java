@@ -21,6 +21,6 @@ class PrintfEx1 {
         System.out.printf("hex=%#x%n", hex);
         System.out.printf("octNum=%o, %d%n", octNum, octNum);
         System.out.printf("hexNum=%x, %d%n", hexNum, hexNum);
-        System.out.printf("binNum=%s, %d%", Integer.toBinaryString(binNUm), binNUm);
+        System.out.printf("binNum=%s, %d%n", Integer.toBinaryString(binNUm), binNUm);
     }
 }
