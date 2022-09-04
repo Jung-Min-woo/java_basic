@@ -6,4 +6,3 @@ class CastingEx1 {
         System.out.println("d="+d);
     }
 }
-
