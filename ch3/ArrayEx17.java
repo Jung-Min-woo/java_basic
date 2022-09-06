@@ -1,26 +1,30 @@
 class ArrayEx17 {
-    public static void main(String[] args){
-        if(args.length !=3){
+    public static void main(String[] args) {
+        if (args.length != 3) {
             System.out.println("usage : Java ArrayEx17 NUM1 OP NUM2");
             System.exit(0);
         }
         int num1 = Integer.parseInt(args[0]);
-        char op = args[1].charAt(1);
+        char op = args[1].charAt(0);
         int num2 = Integer.parseInt(args[2]);
-        
         int result = 0;
-        
-        switch (0) {
+
+        switch (op) {
             case '+':
-                
-               break;
+                result = num1 + num2;
+                break;
             case '-':
-            break;
+                result = num1 - num2;
+                break;
             case 'x':
-            break;
+                result = num1 * num2;
+                break;
             case '/':
-            break;
+                result = num1 / num2;
+                break;
             default:
+                System.out.println("Invalid Operator");
         }
+        System.out.println("result = "+result);
     }
 }
