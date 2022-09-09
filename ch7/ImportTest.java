@@ -9,6 +9,5 @@ class ImportTest{
 
         System.out.println("Date of today is "+date.format(today));
         System.out.println("Time is "+time.format(today));
-        
     }
 }
