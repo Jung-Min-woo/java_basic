@@ -1,6 +1,19 @@
 import java.util.*;
 class PolyArgumentTest3 {
-    
+    public static void main(String[] args) {
+        Buyer b = new Buyer();
+        Tv tv = new Tv();
+        Computer com = new Computer();
+        Audio audio = new Audio();
+
+        b.buy(tv);
+        b.buy(com);
+        b.buy(audio);
+        b.summary();
+        System.out.println();
+        b.refund(com);
+        b.summary();
+    }
 }
 class Product{
     int price;
@@ -59,7 +72,7 @@ class Buyer{
         else{
             System.out.println("There is no product at list you bought");
         }
-    }
+    }   
 
     void summary(){
         int sum = 0;
@@ -74,3 +87,12 @@ class Buyer{
         System.out.println("You bought : "+ itemList);
     }
 }
+        // You bought Tv
+        // You bought Computer
+        // You bought Audio
+        // Total : 350
+        // You bought : Tv, Computer, Audio
+
+        // You refundedComputer
+        // Total : 150
+        // You bought : Tv, Audio
