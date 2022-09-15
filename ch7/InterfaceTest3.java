@@ -9,14 +9,16 @@ class InterfaceTest3 {
 
 class A{
     void methodA(){
-        I i = InstanceManager.getInstance();
+        I i = InstanceManager.getInstance(); // get interface like this
         i.methodB();
         System.out.println(i);
     }
 }
+
 interface I{
     public abstract void methodB();
 }
+
 class B implements I{
     public void methodB(){
         System.out.println("methodB in B class");
