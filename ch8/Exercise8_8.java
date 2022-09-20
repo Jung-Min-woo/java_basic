@@ -10,8 +10,16 @@ class Exercise8_8 {
 
         do {
             count++;
-            System.out.println("Make input between 1 and 100 : ");
-            input = new Scanner(System.in).nextInt();
+            System.out.print("Make input between 1 and 100 : ");
+            
+            //input = new Scanner(System.in).nextInt();
+            
+            try{
+              input = new Scanner(System.in).nextInt();
+            } catch(Exception e){
+                System.out.println("Invalid input");
+                continue;
+            }
 
             if(answer > input){
                 System.out.println("You should take bigger number");
@@ -19,7 +27,7 @@ class Exercise8_8 {
                 System.out.println("You should take smaller number");
             } else{
                 System.out.println("You got it");
-                System.out.println("You tried " + count+ "times");
+                System.out.println("You tried " + count+ " times");
                 break;
             }
         } while (true);
