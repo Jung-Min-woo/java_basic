@@ -9,6 +9,8 @@ class ExceptionEx8 {
         } catch(ArithmeticException ae){
             ae.printStackTrace();
             System.out.println("Exception Message : " + ae.getMessage());
+        } finally{
+            System.out.println("finally");
         }
         System.out.println(6);
     }    
