@@ -15,7 +15,7 @@ class ObjectsTest {
         for(String[] tmp : str2D_2)
         System.out.print(Arrays.toString(tmp));
         System.out.println("}");
-
+        
         System.out.println("equals(str2D, str2D_2)="+
                             Objects.equals(str2D, str2D_2));
         System.out.println("deepEquals(str2D, str2D_2)="+
