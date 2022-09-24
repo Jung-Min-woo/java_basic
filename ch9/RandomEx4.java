@@ -11,12 +11,12 @@ class RandomEx4 {
                     + "VALUES("
                     + "'" + getRandArr(CODE1) + "'"            
                     + ", '" + getRandArr(CODE2) + "'"            
-                    + ", '" + getRandArr(CODE3) + "'"            
+                    + ", '" + getRandArr(CODE3) + "'"
                     + ", " + getRand(100, 200) 
+                    + ");"
                     );
         }
     }
-
     public static String getRandArr(String[] arr) {
            return arr[getRand(arr.length-1)];
     }
@@ -27,3 +27,13 @@ class RandomEx4 {
         return (int)(Math.random()*(Math.abs(to-from)+1) + Math.min(from, to));
     }
 }
+        // INSERT INTO TEST_TABLE'VALUES('017', 'WOMAN', 'In one's twenties', 178
+        // INSERT INTO TEST_TABLE'VALUES('010', 'MAN', 'In one's forties', 101
+        // INSERT INTO TEST_TABLE'VALUES('017', 'WOMAN', 'In one's forties', 116
+        // INSERT INTO TEST_TABLE'VALUES('017', 'WOMAN', 'In one's twenties', 103
+        // INSERT INTO TEST_TABLE'VALUES('011', 'MAN', 'In one's twenties', 131
+        // INSERT INTO TEST_TABLE'VALUES('019', 'MAN', 'In one's forties', 115
+        // INSERT INTO TEST_TABLE'VALUES('011', 'MAN', 'In one's thirties', 123
+        // INSERT INTO TEST_TABLE'VALUES('019', 'WOMAN', 'In one's thirties', 132
+        // INSERT INTO TEST_TABLE'VALUES('017', 'WOMAN', 'In one's forties', 182
+        // INSERT INTO TEST_TABLE'VALUES('011', 'WOMAN', 'In one's forties', 130
