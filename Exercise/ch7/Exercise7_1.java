@@ -10,15 +10,25 @@ class SutdaDeck{
                         ( i == 0 || i == 2 || i == 7 ?  true : false) );
         }
     }
-    void shuffle(){
+    public void shuffle(){
         SutdaCard tempCard = new SutdaCard();
-        CARD_NUM * (int)(Math.random()+1);
+        for(int i = 0 ; i < cards.length; i++){
+            int idx = (int)(Math.random()*cards.length);
+
+            tempCard = cards[i];
+            cards[i] = cards[idx];
+            cards[idx] = tempCard;
+        }
     }
     SutdaCard pick(int index){
-
+        if(index < 0 || index >= cards.length){
+            System.out.println("pick>>Invalid index");
+            return null;
+        }
+        return cards[index];
     }
     SutdaCard pick(){
-
+        return cards[(int)(Math.random()*cards.length)];
     }
 }
 class SutdaCard{
@@ -41,9 +51,15 @@ class Exercise7_1 {
     public static void main(String[] args) {
         SutdaDeck deck = new SutdaDeck();
 
+        System.out.println(deck.pick(0));
+        System.out.println(deck.pick());
+        deck.shuffle();
+
         for(int i = 0 ; i<deck.cards.length; i++ ){
             System.out.print(deck.cards[i] +  (i != deck.cards.length-1 ? "," : "") );
         }
-        
+
+        System.out.println();
+        System.out.println(deck.pick(0));
     }    
 }
