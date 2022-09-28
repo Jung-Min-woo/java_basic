@@ -12,7 +12,7 @@ class CalendarEx4 {
         System.out.println("= 6 Months Before =");
         date.add(Calendar.MONTH, -6);
         System.out.println(toString(date));
-
+        
         System.out.println("= 31 Days After =");
         date.add(Calendar.DATE, 31);
         System.out.println(toString(date));
