@@ -1,8 +1,10 @@
 import java.util.*;
+
 class CalendarEx4 {
     public static void main(String[] args) {
         Calendar date = Calendar.getInstance();
         date.set(2005, 7, 31); //2005 08 31
+
         System.out.println(toString(date));
 
         System.out.println("= 1 Day After =");
@@ -16,7 +18,8 @@ class CalendarEx4 {
         System.out.println("= 31 Days After =");
         date.add(Calendar.DATE, 31);
         System.out.println(toString(date));
-
+    
+        //'Roll' does not change MONTH FIELD
         System.out.println("= 31 Days After(ROLL) =");
         date.roll(Calendar.DATE, 31);
         System.out.println(toString(date));
